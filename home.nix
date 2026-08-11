@@ -5,7 +5,8 @@
   imports = with inputs; [
     ./niri.nix
     ./wofi.nix
-    ./nixcord.nix
+    ./vencord.nix
+    ./waybar.nix
     # niri.homeModules.niri
   ];
   programs.home-manager.enable = true;
