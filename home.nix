@@ -4,6 +4,7 @@
   home.homeDirectory = "/home/june";
   imports = with inputs; [
         ./niri.nix
+        ./wofi.nix
         # niri.homeModules.niri
   ];
   programs.home-manager.enable = true;
