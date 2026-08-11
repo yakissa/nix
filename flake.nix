@@ -14,6 +14,11 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    nixcord = {
+      url = "github:4evy/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   outputs = inputs@{ self, nixpkgs, home-manager, niri, ... }:
   let

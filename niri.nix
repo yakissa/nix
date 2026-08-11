@@ -7,8 +7,11 @@
 			 keyboard.xkb.layout = "fr";
 		 };
 		 binds = {
-			 #"Mod+M".action.maximize-window-to-edges = true;
-			 "Mod+Q".action.quit.skip-confirmation =true;
+			 "Mod+M".action.maximize-column = { };
+			 "Mod+Q".action.close-window = { };
+			 "Mod+Return".action.quit.skip-confirmation = true;
+			 "XF86AudioRaiseVolume".action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"];
+       "XF86AudioLowerVolume".action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"];
 			 "Mod+R".action.spawn = [ "wofi" ];
 			 "Mod+T".action.spawn = [ "kitty" ];
 			 "Mod+1".action.focus-workspace = 1;

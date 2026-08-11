@@ -57,6 +57,7 @@
     kitty
     vscode
     firefox
+    nixfmt
     kdePackages.dolphin
   ];
 
