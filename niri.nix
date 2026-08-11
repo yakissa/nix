@@ -9,6 +9,7 @@
 		 binds = {
 			 #"Mod+M".action.maximize-window-to-edges = true;
 			 "Mod+Q".action.quit.skip-confirmation =true;
+			 "Mod+R".action.spawn = [ "wofi" ];
 			 "Mod+T".action.spawn = [ "kitty" ];
 			 "Mod+1".action.focus-workspace = 1;
 			 "Mod+2".action.focus-workspace = 2;
