@@ -15,7 +15,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, niri, ... }:
   let
 	system = "x86_64-linux";
 	specialArgs = {
@@ -28,6 +28,7 @@
       	     ./sddm.nix
              ./hosts/configuration.nix 
              home-manager.nixosModules.home-manager
+	     niri.nixosModules.niri
              {
              	home-manager.useGlobalPkgs = true;
              	home-manager.useUserPackages = true;

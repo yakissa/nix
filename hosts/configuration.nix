@@ -31,6 +31,8 @@
 
   # Set your time zone.
   time.timeZone = "Europe/Paris";
+
+  programs.niri.enable = true;
  
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -61,20 +63,20 @@
     kdePackages.dolphin
   ];
 
-  xdg.portal = {
-  enable = true;
-  extraPortals = with pkgs; [
-    kdePackages.xdg-desktop-portal-kde
-    xdg-desktop-portal-gtk
-  ];
-  config = {
-    common.default = [ "gtk" ];
-    niri = {
-      default = [ "gtk" ];
-      "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
-    };
-  };
-};
+  # xdg.portal = {
+  #   enable = true;
+  #   extraPortals = with pkgs; [
+  #     kdePackages.xdg-desktop-portal-kde
+  #     xdg-desktop-portal-gtk
+  #   ];
+  #   config = {
+  #     common.default = [ "gtk" ];
+  #     niri = {
+  #       default = [ "gtk" ];
+  #       "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
+  #     };
+  #   };
+  # };
 
   system.stateVersion = "26.05"; # Did you read the comment?
 
