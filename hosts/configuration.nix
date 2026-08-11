@@ -9,8 +9,6 @@
       ./hardware-configuration.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";
@@ -46,7 +44,6 @@
     ];
   };
 
-  # programs.firefox.enable = true;
 
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
@@ -63,22 +60,7 @@
     kdePackages.dolphin
   ];
 
-  # xdg.portal = {
-  #   enable = true;
-  #   extraPortals = with pkgs; [
-  #     kdePackages.xdg-desktop-portal-kde
-  #     xdg-desktop-portal-gtk
-  #   ];
-  #   config = {
-  #     common.default = [ "gtk" ];
-  #     niri = {
-  #       default = [ "gtk" ];
-  #       "org.freedesktop.impl.portal.FileChooser" = [ "kde" ];
-  #     };
-  #   };
-  # };
-
-  system.stateVersion = "26.05"; # Did you read the comment?
+    system.stateVersion = "26.05"; # Did you read the comment?
 
 }
 
