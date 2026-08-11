@@ -19,8 +19,8 @@
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/21b7c55c-7628-4bfc-bcde-d7049488e3d7";
-      fsType = "ext4";
+    { device = "/dev/disk/by-uuid/341A-94E3";
+      fsType = "vfat";
     };
 
   swapDevices =
@@ -30,3 +30,4 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
+
