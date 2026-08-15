@@ -7,6 +7,7 @@
     ./wofi.nix
     ./vencord.nix
     ./waybar.nix
+    ./fonts.nix
     # niri.homeModules.niri
   ];
   programs.home-manager.enable = true;
