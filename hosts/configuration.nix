@@ -68,6 +68,7 @@
     vscode
     firefox
     nixfmt
+    swww
     kdePackages.dolphin
     signal-desktop
   ];

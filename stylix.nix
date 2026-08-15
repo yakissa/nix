@@ -1,0 +1,6 @@
+{inputs, ...}:
+{
+  stylix = {
+    enable = true;
+  }
+}
