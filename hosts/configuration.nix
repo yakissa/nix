@@ -35,7 +35,7 @@
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
-
+  programs.nm-applet.enable = true;
   # Set your time zone.
   time.timeZone = "Europe/Paris";
 

@@ -2,7 +2,7 @@
 {
   programs.niri = {
     settings = {
-      spawn-at-startup = "waybar";
+      spawn-at-startup = ["waybar", "nm-applet --indicator"];
       environment."NIXOS_OZONE_WL" = "1";
       input = {
         keyboard.xkb.layout = "fr";
