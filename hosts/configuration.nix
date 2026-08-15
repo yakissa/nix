@@ -2,12 +2,19 @@
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
 
-{ inputs, config, lib, pkgs, ... }:
+{
+  inputs,
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports = with inputs; [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = with inputs; [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.grub.enable = true;
@@ -17,10 +24,12 @@
 
   hardware.graphics.enable = true;
 
-  nix.settings.extra-experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.extra-experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   fonts.enableDefaultPackages = true;
-  
 
   networking.hostName = "june"; # Define your hostname.
 
@@ -31,7 +40,6 @@
   time.timeZone = "Europe/Paris";
 
   programs.niri.enable = true;
- 
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   home-manager.users.june = ../home.nix;
@@ -44,11 +52,13 @@
     ];
   };
 
-
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   nixpkgs.config.allowUnfree = true;
-  environment.pathsToLink = [ "/share/applications" "/share/xdg-desktop-portal" ];
+  environment.pathsToLink = [
+    "/share/applications"
+    "/share/xdg-desktop-portal"
+  ];
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
@@ -59,9 +69,9 @@
     firefox
     nixfmt
     kdePackages.dolphin
+    signal-desktop
   ];
 
-    system.stateVersion = "26.05"; # Did you read the comment?
+  system.stateVersion = "26.05"; # Did you read the comment?
 
 }
-
