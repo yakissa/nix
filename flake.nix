@@ -21,7 +21,7 @@
     };
 
     stylix = {
-      url = "github:nix-community/stylix";
+      url = "github:nix-community/stylix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -48,7 +48,6 @@
           ./sddm.nix
           ./hosts/configuration.nix
           home-manager.nixosModules.home-manager
-          niri.nixosModules.niri
           stylix.nixosModules.stylix
           {
             home-manager.useGlobalPkgs = true;
