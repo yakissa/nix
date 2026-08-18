@@ -8,6 +8,11 @@
       #   ];
       # }
       {
+        command = {
+          "waybar"
+        }
+      }
+      {
         command = [
           "nm-applet"
           "--indicator"
