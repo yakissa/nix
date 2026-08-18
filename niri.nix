@@ -10,7 +10,7 @@
       {
         command = {
           "waybar"
-        }
+        };
       }
       {
         command = [
