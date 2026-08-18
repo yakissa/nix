@@ -25,6 +25,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
   outputs =
     inputs@{
@@ -33,6 +38,7 @@
       home-manager,
       niri,
       stylix,
+      noctalia,
       ...
     }:
     let
@@ -48,7 +54,7 @@
           ./sddm.nix
           ./hosts/configuration.nix
           home-manager.nixosModules.home-manager
-          stylix.nixosModules.stylix
+	  stylix.nixosModules.stylix
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

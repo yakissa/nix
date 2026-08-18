@@ -2,7 +2,11 @@
 {
   programs.niri.settings = {
     "spawn-at-startup" = [
-      { command = [ "waybar" ]; }
+      # {
+      #   command = [
+      #     "noctalia"
+      #   ];
+      # }
       {
         command = [
           "nm-applet"
@@ -30,7 +34,9 @@
         "@DEFAULT_AUDIO_SINK@"
         "0.1-"
       ];
-      "Mod+R".action.spawn = [ "wofi" ];
+      "Mod+R".action.spawn = [
+        "wofi"
+      ];
       "Mod+T".action.spawn = [ "kitty" ];
       "Mod+1".action."focus-workspace" = 1;
       "Mod+2".action."focus-workspace" = 2;

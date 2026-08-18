@@ -9,6 +9,7 @@
     ./vencord.nix
     ./waybar.nix
     ./fonts.nix
+    #    ./noctalia.nix
   ];
   programs.home-manager.enable = true;
 

@@ -30,7 +30,7 @@
   ];
 
   fonts.enableDefaultPackages = true;
-
+  #services.upower.enable = true;
   networking.hostName = "june"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
@@ -40,6 +40,7 @@
   time.timeZone = "Europe/Paris";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.niri.enable = true;
   home-manager.users.june = ../home.nix;
   users.users.june = {
     isNormalUser = true;
