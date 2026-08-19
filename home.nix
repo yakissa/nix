@@ -10,6 +10,7 @@
     ./waybar.nix
     ./fonts.nix
     #    ./noctalia.nix
+    ./pipewire.nix
   ];
   programs.home-manager.enable = true;
 
