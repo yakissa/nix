@@ -42,6 +42,11 @@
       "Mod+R".action.spawn = [
         "wofi"
       ];
+      "Mod+Print".action.spawn = [
+        "sh"
+        "-c"
+        "${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.swappy}/bin/swappy -f -"
+      ];
       "Mod+T".action.spawn = [ "kitty" ];
       "Mod+1".action."focus-workspace" = 1;
       "Mod+2".action."focus-workspace" = 2;

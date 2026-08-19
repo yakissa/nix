@@ -71,6 +71,9 @@
     kdePackages.dolphin
     signal-desktop
     pavucontrol
+    grim
+    slurp
+    swappy
   ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
