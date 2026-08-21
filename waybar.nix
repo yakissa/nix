@@ -12,24 +12,27 @@
           "HDMI-A-1"
         ];
         modules-left = [
-          "sway/workspaces"
-          "sway/mode"
           "wlr/taskbar"
         ];
         modules-center = [
-          "sway/window"
+          "clock"
         ];
         modules-right = [
-          "mpd"
+          "tray"
           "temperature"
           "battery"
-          "clock"
+          "custom/wlogout"
         ];
 
         "sway/workspaces" = {
           disable-scroll = true;
           all-outputs = true;
         };
+        "custom/wlogout" = {
+          on-click = "wlogout";
+          format = "";
+        };
+
       };
     };
   };

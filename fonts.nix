@@ -7,8 +7,11 @@
     noto-fonts-color-emoji
     liberation_ttf
     fira-code
-    fira-code-symbols
+    hack-font
     mplus-outline-fonts.githubRelease
     dina-font
+    font-awesome
+    nerd-fonts.symbols-only
+    nerd-fonts.fira-code
   ];
 }
