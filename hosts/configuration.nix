@@ -76,6 +76,7 @@
     swappy
     mako
     libnotify
+    wlogout
   ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
