@@ -1,0 +1,101 @@
+/*
+ *  ./waybar/style.css
+ */
+* {
+    font-family: Fira Code;
+    font-size: 12px;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(00, 00, 00, 0.5);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+}
+
+/* General styling for individual modules */
+#clock,
+#temperature,
+#cpu,
+#tray,
+#network,
+#pulseaudio,
+#battery,
+#custom-wlogout,
+#custom-media,
+#backlight {
+    background-color: #202020;
+    font-size: 12px;
+    /*padding: 3px 8px;*/
+    margin: 8px 0px;
+    padding-right: 20px;
+}
+
+/* Module-specific colors for Network, Pulseaudio, Backlight */
+#network #pulseaudio {
+    color: #ffffff;
+}
+
+#backlight {
+    color: #ffc800;
+}
+
+/* Pulseaudio mute state */
+#pulseaudio.muted {
+    color: #ff0000;
+}
+
+#network {
+    border-radius: 8px 0px 0px 8px;
+}
+
+#backlight {
+    border-radius: 0px 8px 8px 0px;
+}
+
+/* Temperature, CPU, and Memory colors */
+#temperature {
+    color: #ffffff;
+}
+
+#cpu {
+    color: #ffffff;
+}
+
+#memory {
+    color: #ffffff;
+}
+
+#battery {
+    color: #ffffff;
+}
+
+/* Workspaces active buttom styling */
+#workspaces button {
+    color: #d0d0d0;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+/* Tooltip styling */
+tooltip {
+    border-radius: 15px;
+    padding: 15px;
+    background-color: #202020;
+}
+
+tooltip label {
+    padding: 5px;
+    font-size: 14px;
+}

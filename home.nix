@@ -12,6 +12,7 @@
     #    ./noctalia.nix
     ./pipewire.nix
     ./catppuccin.nix
+    ./waybar/mediaplayer.nix
   ];
   programs.home-manager.enable = true;
 
