@@ -11,6 +11,7 @@
     ./fonts.nix
     #    ./noctalia.nix
     ./pipewire.nix
+    ./catppuccin.nix
   ];
   programs.home-manager.enable = true;
 
