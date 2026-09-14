@@ -35,6 +35,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nlock = {
+      url = "github:OldUser101/nlock";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
   outputs =
     inputs@{
@@ -44,6 +49,7 @@
       niri,
       stylix,
       noctalia,
+      nlock,
       ...
     }:
     let

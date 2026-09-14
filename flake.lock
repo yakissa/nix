@@ -353,6 +353,26 @@
         "type": "github"
       }
     },
+    "nlock": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1789135111,
+        "narHash": "sha256-2N6Bh8TCn/q1sKIuYhnM4hKjxXQedOtPxTth11jvEZ8=",
+        "owner": "OldUser101",
+        "repo": "nlock",
+        "rev": "ebbe97c2e3045c31ce52d8690bf4ba131069e461",
+        "type": "github"
+      },
+      "original": {
+        "owner": "OldUser101",
+        "repo": "nlock",
+        "type": "github"
+      }
+    },
     "noctalia": {
       "inputs": {
         "nixpkgs": [
@@ -405,6 +425,7 @@
         "niri": "niri",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs",
+        "nlock": "nlock",
         "noctalia": "noctalia",
         "stylix": "stylix"
       }
