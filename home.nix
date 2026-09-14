@@ -13,6 +13,7 @@
     ./pipewire.nix
     ./catppuccin.nix
     ./waybar/mediaplayer.nix
+    ./wlogout.nix
   ];
   programs.home-manager.enable = true;
 
