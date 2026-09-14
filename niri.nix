@@ -20,6 +20,7 @@
       }
     ];
     environment."NIXOS_OZONE_WL" = "1";
+    #environment."DISPLAY" = ":0";
     input = {
       keyboard.xkb.layout = "fr";
     };
