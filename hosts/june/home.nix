@@ -5,15 +5,14 @@
   imports = with inputs; [
     niri.homeModules.niri
     ./niri.nix
-    ./wofi.nix
-    ./vencord.nix
-    ./waybar.nix
     ./fonts.nix
-    #    ./noctalia.nix
-    ./pipewire.nix
-    ./catppuccin.nix
-    ./waybar/mediaplayer.nix
-    ./wlogout.nix
+    ../../flakes/wofi.nix
+    ../../flakes/vencord.nix
+    ../../flakes/waybar/waybar.nix
+    ../../flakes/waybar/mediaplayer.nix
+    ../../flakes/pipewire.nix
+    ../../flakes/catppuccin.nix
+    ../../flakes/wlogout/wlogout.nix
   ];
   programs.home-manager.enable = true;
 

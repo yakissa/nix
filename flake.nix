@@ -62,7 +62,8 @@
       nixosConfigurations.june = nixpkgs.lib.nixosSystem {
         specialArgs = specialArgs;
         modules = [
-          ./sddm.nix
+          ./hosts/june/sddm.nix
+          ./hosts/june/home.nix
           ./hosts/configuration.nix
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
