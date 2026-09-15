@@ -15,7 +15,6 @@
     # Include the results of the hardware scan.
     inputs.nlock.nixosModules.default
     ./hardware-configuration.nix
-    ../nlock.nix
   ];
 
   boot.loader.efi.canTouchEfiVariables = true;
@@ -65,7 +64,7 @@
   };
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.niri.enable = true;
-  home-manager.users.june = ../home.nix;
+  home-manager.users.june = ./june/home.nix;
   users.users.june = {
     isNormalUser = true;
     extraGroups = [
@@ -101,8 +100,6 @@
     grim
     slurp
     swappy
-    mako
-    libnotify
     spotify
     tor-browser
     kdePackages.kleopatra

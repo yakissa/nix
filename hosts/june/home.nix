@@ -6,6 +6,7 @@
     niri.homeModules.niri
     ./niri.nix
     ./fonts.nix
+    ../../services/mako.nix
     ../../flakes/wofi.nix
     ../../flakes/vencord.nix
     ../../flakes/waybar/waybar.nix
