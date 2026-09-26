@@ -3,7 +3,7 @@
   home.packages = with pkgs; [
     libnotify
   ];
-  services.mako = {
+  mako = {
     enable = true;
     anchor = "bottom-right";
     backgroundColor = "#000000FF"; # mettre une var globale ??

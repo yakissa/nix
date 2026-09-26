@@ -22,11 +22,14 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
+  boot.kernelParams = [
+    "btusb.enable_autosuspend=0"
+  ];
   boot.kernelModules = [
     "kvm-amd"
     "uinput"
   ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ xpadneo ];
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -48,6 +51,7 @@
     powerOnBoot = true;
     settings = {
       General = {
+        ControllerMode = "dual";
         Experimental = true;
         FastConnectable = true;
       };
@@ -57,7 +61,14 @@
     };
   };
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.xpadneo.enable = true;
+  boot.extraModprobeConfig = ''
+    options bluetooth disable_ertm=Y
+  '';
 
+  hardware.enableAllFirmware = true;
+  hardware.uinput.enable = true;
+  hardware.steam-hardware.enable = true;
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.graphics.enable = true;
   security.pam.services.nlock = { };

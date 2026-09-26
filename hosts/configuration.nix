@@ -70,6 +70,8 @@
     extraGroups = [
       "wheel"
       "docker"
+      "input"
+      "uinput"
     ];
     packages = with pkgs; [
       tree
@@ -93,7 +95,7 @@
     vscode
     firefox
     nixfmt
-    swww
+    awww
     kdePackages.dolphin
     signal-desktop
     pavucontrol
@@ -113,6 +115,7 @@
     rar
     xinput
     evtest
+    libreoffice-fresh
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ glibc ];
