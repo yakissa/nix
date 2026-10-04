@@ -69,7 +69,7 @@
       always-center-single-column = true;
       empty-workspace-above-first = true;
       default-column-display = "tabbed";
-      background-color = "#ff85ff";
+      background-color = "transparent";
 
       default-column-width = {
         proportion = 0.3;
@@ -84,7 +84,7 @@
       };
 
       border = {
-        enable = true;
+        enable = false;
         width = 4;
         # active-gradient from="#ffbb66" to="#ffc880" angle=45 relative-to="workspace-view"
         # inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view" in="srgb-linear"
@@ -92,7 +92,7 @@
       };
 
       shadow = {
-        enable = true;
+        enable = false;
         softness = 30;
         spread = 5;
         offset = {

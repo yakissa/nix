@@ -41,6 +41,10 @@
   #services.upower.enable = true;
   networking.hostName = "june"; # Define your hostname.
   networking.networkmanager.enable = true;
+  networking.networkmanager.plugins = with pkgs; [
+	  networkmanager-openconnect
+	  networkmanager-openvpn
+  ];
   programs.xwayland.enable = true;
   services.blueman.enable = true;
   hardware.enableAllFirmware = true;
@@ -116,6 +120,7 @@
     xinput
     evtest
     libreoffice-fresh
+    openconnect
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ glibc ];
