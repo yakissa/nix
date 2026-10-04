@@ -42,8 +42,8 @@
   networking.hostName = "june"; # Define your hostname.
   networking.networkmanager.enable = true;
   networking.networkmanager.plugins = with pkgs; [
-	  networkmanager-openconnect
-	  networkmanager-openvpn
+    networkmanager-openconnect
+    networkmanager-openvpn
   ];
   programs.xwayland.enable = true;
   services.blueman.enable = true;
@@ -111,7 +111,11 @@
     kdePackages.kleopatra
     gparted-full
     unzip
-    retroarch-full
+    (retroarch.withCores (
+      cores: with cores; [
+        citra
+      ]
+    ))
     p7zip
     cachix
     ryubing
@@ -121,6 +125,7 @@
     evtest
     libreoffice-fresh
     openconnect
+    lutris
   ];
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [ glibc ];

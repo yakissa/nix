@@ -72,6 +72,7 @@
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.graphics.enable = true;
   security.pam.services.nlock = { };
+  hardware.graphics.enable32Bit = true;
   hardware.nvidia-container-toolkit.enable = true;
   hardware.nvidia = {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
