@@ -72,7 +72,7 @@
       background-color = "transparent";
 
       default-column-width = {
-        proportion = 0.3;
+        proportion = 0.5;
       };
 
       focus-ring = {
